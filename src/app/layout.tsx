@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cinzel, MedievalSharp } from "next/font/google";
+import { Geist, Geist_Mono, Cinzel, MedievalSharp, EB_Garamond, UnifrakturCook } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,6 +23,17 @@ const medievalSharp = MedievalSharp({
   weight: "400",
 });
 
+const ebGaramond = EB_Garamond({
+  variable: "--font-garamond",
+  subsets: ["latin"],
+});
+
+const unifrakturCook = UnifrakturCook({
+  variable: "--font-fraktur",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "Medieval OnlyFans",
   description: "A medieval-themed sandbox application",
@@ -34,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${ebGaramond.variable} ${unifrakturCook.variable}`}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${medievalSharp.variable} antialiased`}
       >

@@ -4,6 +4,13 @@
   --background: #ffffff;
   --foreground: #171717;
   
+  /* New theme tokens */
+  --ink: #1a1a1a;
+  --parchment: #f9f5e7;
+  --royal: #1f3a93;
+  --crimson: #7a1f1f;
+  --gold: #c6a664;
+  
   /* Medieval theme variables */
   --medieval-gold: #D4AF37;
   --medieval-silver: #C0C0C0;
@@ -20,6 +27,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* New theme colors */
+  --color-ink: var(--ink);
+  --color-parchment: var(--parchment);
+  --color-royal: var(--royal);
+  --color-crimson: var(--crimson);
+  --color-gold: var(--gold);
+  
+  /* New theme fonts */
+  --font-display: var(--font-fraktur);
+  --font-serif: var(--font-garamond);
   
   /* Medieval theme colors */
   --color-medieval-gold: var(--medieval-gold);
@@ -45,6 +63,42 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* New utility classes */
+.bg-parchment {
+  background-color: var(--parchment);
+}
+
+.text-ink {
+  color: var(--ink);
+}
+
+.illum-corners {
+  position: relative;
+}
+
+.illum-corners::before,
+.illum-corners::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gold);
+}
+
+.illum-corners::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.illum-corners::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
 }
 
 /* Medieval utility classes */
