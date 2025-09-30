@@ -3,6 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Medieval theme variables */
+  --medieval-gold: #D4AF37;
+  --medieval-silver: #C0C0C0;
+  --medieval-bronze: #CD7F32;
+  --medieval-stone: #8B8680;
+  --medieval-dark: #2C1810;
+  --medieval-blood: #8B0000;
+  --medieval-shadow: 0 4px 8px rgba(44, 24, 16, 0.3);
+  --medieval-border: 2px solid #D4AF37;
 }
 
 @theme inline {
@@ -10,6 +20,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Medieval theme colors */
+  --color-medieval-gold: var(--medieval-gold);
+  --color-medieval-silver: var(--medieval-silver);
+  --color-medieval-bronze: var(--medieval-bronze);
+  --color-medieval-stone: var(--medieval-stone);
+  --color-medieval-dark: var(--medieval-dark);
+  --color-medieval-blood: var(--medieval-blood);
+  
+  /* Medieval fonts */
+  --font-medieval: 'Cinzel', serif;
+  --font-script: 'MedievalSharp', cursive;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +45,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Medieval utility classes */
+.medieval-text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.medieval-border {
+  border: var(--medieval-border);
+  border-radius: 8px;
+}
+
+.parchment-bg {
+  background: var(--medieval-gold);
+  background-image: linear-gradient(45deg, #D4AF37 25%, transparent 25%);
+}
+
+.stone-bg {
+  background: var(--medieval-stone);
+  background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.medieval-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +13,32 @@ export default function Home() {
           height={38}
           priority
         />
+        
+        {/* Medieval Theme Demo Section */}
+        <div className="bg-gradient-to-r from-yellow-100 to-yellow-200 dark:from-yellow-900/20 dark:to-yellow-800/20 border-2 border-yellow-400 dark:border-yellow-600 rounded-lg p-6 w-full max-w-2xl">
+          <h2 className="text-2xl font-bold text-yellow-800 dark:text-yellow-200 mb-4">
+            🏰 Medieval Theme Demo
+          </h2>
+          <p className="text-yellow-700 dark:text-yellow-300 mb-4">
+            This Next.js app now includes a medieval-themed sandbox! The original styling remains unchanged, 
+            but you can explore our new medieval components and theme.
+          </p>
+          <div className="flex gap-4 items-center flex-col sm:flex-row">
+            <Link
+              href="/mof"
+              className="rounded-full border border-solid border-yellow-600 transition-colors flex items-center justify-center bg-yellow-600 text-white gap-2 hover:bg-yellow-700 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+            >
+              ⚔️ Visit MOF Sandbox
+            </Link>
+            <Link
+              href="/about"
+              className="rounded-full border border-solid border-yellow-600 transition-colors flex items-center justify-center hover:bg-yellow-50 dark:hover:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto"
+            >
+              📖 Learn More
+            </Link>
+          </div>
+        </div>
+
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
