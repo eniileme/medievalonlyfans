@@ -31,7 +31,7 @@ const ebGaramond = EB_Garamond({
 const unifrakturCook = UnifrakturCook({
   variable: "--font-fraktur",
   subsets: ["latin"],
-  weight: "400",
+  weight: "700",
 });
 
 export const metadata: Metadata = {
